@@ -5,9 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 🇺🇸 美国 | USA, server: 134.195.101.118, port: 2377, type: ss, cipher: chacha20-ietf-poly1305, password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv, plugin: obfs, plugin-opts: {mode: tls, host: 817aa69.default.nintendo.com:112719}, udp: true}
-  - {name: 🇺🇸 美国 | USA 2, server: 134.195.101.117, port: 2377, type: ss, cipher: chacha20-ietf-poly1305, password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv, plugin: obfs, plugin-opts: {mode: tls, host: 817aa69.default.nintendo.com:112719}, udp: true}
-  - {name: 🇺🇸 美国 | USA 3, server: 134.195.101.127, port: 2377, type: ss, cipher: chacha20-ietf-poly1305, password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv, plugin: obfs, plugin-opts: {mode: tls, host: 817aa69.default.nintendo.com:112719}, udp: true}
+  - {name: 🇦🇹 奥地利 | AUT, server: iranpoems.ir, port: 443, type: trojan, password: Mitivpn, sni: www.gamingdll.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /usa=mitivpn, headers: {Host: www.gamingdll.ir}}, udp: true}
 proxy-groups:
   - name: ✈️ ‍起飞
     type: select
@@ -36,15 +34,11 @@ proxy-groups:
     interval: 30
     tolerance: 100
     proxies:
-      - 🇺🇸 美国 | USA
-      - 🇺🇸 美国 | USA 2
-      - 🇺🇸 美国 | USA 3
+      - 🇦🇹 奥地利 | AUT
   - name: 👆🏻 ‍指定
     type: select
     proxies:
-      - 🇺🇸 美国 | USA
-      - 🇺🇸 美国 | USA 2
-      - 🇺🇸 美国 | USA 3
+      - 🇦🇹 奥地利 | AUT
   - name: 🛩️ ‍墙内
     type: select
     proxies:
@@ -132,16 +126,14 @@ proxy-groups:
     interval: 15
     tolerance: 300
     proxies:
-      - 🇺🇸 美国 | USA
-      - 🇺🇸 美国 | USA 2
-      - 🇺🇸 美国 | USA 3
+      - DIRECT
   - name: 🎏 ‍其他
     type: url-test
     url: https://i.ytimg.com/generate_204
     interval: 30
     tolerance: 100
     proxies:
-      - DIRECT
+      - 🇦🇹 奥地利 | AUT
   - name: 👆🏻🇭🇰 ‍香港
     type: select
     proxies:
@@ -165,13 +157,11 @@ proxy-groups:
   - name: 👆🏻🇺🇸 ‍美国
     type: select
     proxies:
-      - 🇺🇸 美国 | USA
-      - 🇺🇸 美国 | USA 2
-      - 🇺🇸 美国 | USA 3
+      - DIRECT
   - name: 👆🏻🎏 ‍其他
     type: select
     proxies:
-      - DIRECT
+      - 🇦🇹 奥地利 | AUT
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,DIRECT
   - DOMAIN-SUFFIX,ip6-localhost,DIRECT
@@ -1985,6 +1975,26 @@ rules:
   - IP-CIDR,203.107.1.34/32,📺 ‍B站,no-resolve
   - IP-CIDR,203.107.1.65/32,📺 ‍B站,no-resolve
   - IP-CIDR,203.107.1.66/32,📺 ‍B站,no-resolve
+  - DOMAIN,apiintl.biliapi.net,📺 ‍B站
+  - DOMAIN,upos-hz-mirrorakam.akamaized.net,📺 ‍B站
+  - DOMAIN-SUFFIX,acg.tv,📺 ‍B站
+  - DOMAIN-SUFFIX,acgvideo.com,📺 ‍B站
+  - DOMAIN-SUFFIX,b23.tv,📺 ‍B站
+  - DOMAIN-SUFFIX,bigfun.cn,📺 ‍B站
+  - DOMAIN-SUFFIX,bigfunapp.cn,📺 ‍B站
+  - DOMAIN-SUFFIX,biliapi.com,📺 ‍B站
+  - DOMAIN-SUFFIX,biliapi.net,📺 ‍B站
+  - DOMAIN-SUFFIX,bilibili.co,📺 ‍B站
+  - DOMAIN-SUFFIX,bilibili.com,📺 ‍B站
+  - DOMAIN-SUFFIX,bilibili.tv,📺 ‍B站
+  - DOMAIN-SUFFIX,biligame.com,📺 ‍B站
+  - DOMAIN-SUFFIX,biligame.net,📺 ‍B站
+  - DOMAIN-SUFFIX,biliintl.co,📺 ‍B站
+  - DOMAIN-SUFFIX,bilivideo.cn,📺 ‍B站
+  - DOMAIN-SUFFIX,bilivideo.com,📺 ‍B站
+  - DOMAIN-SUFFIX,hdslb.com,📺 ‍B站
+  - DOMAIN-SUFFIX,im9.com,📺 ‍B站
+  - DOMAIN-SUFFIX,smtcdns.net,📺 ‍B站
   - DOMAIN-KEYWORD,anthropic,🤖 ‍AI
   - DOMAIN-KEYWORD,claude,🤖 ‍AI
   - DOMAIN-KEYWORD,openai,🤖 ‍AI
