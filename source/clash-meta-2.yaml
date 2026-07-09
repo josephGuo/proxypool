@@ -5,8 +5,17 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 🇰🇷 韩国 | KOR, server: 217.142.138.61, port: 80, type: vmess, uuid: ac1b933d-afff-4487-93ef-f57130a55dff, alterId: 0, cipher: auto, tls: false, network: http, http-opts: {method: GET, path: [/]}, udp: true}
-  - {name: 🇺🇸 美国 | USA, server: tinkered-pennies-puppies.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: hbGrpfvNrJsUmKmPbR3iY2, udp: true}
+  - {name: 🇦🇹 奥地利 | AUT, server: 212.183.88.136, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true}
+  - {name: 🇩🇪 德国 | DEU, server: jason.ilovezhenjiu.top, port: 42670, type: vless, uuid: 4dbb4d3f-2b9a-45b6-b741-e839c570ffd8, tls: true, flow: xtls-rprx-vision, servername: jason.ilovezhenjiu.top, client-fingerprint: chrome, network: tcp, udp: true}
+  - {name: 🇳🇱 荷兰 | NLD, server: classic-duckling.rooster465.autos, port: 443, type: trojan, password: XG59623478, skip-cert-verify: true, udp: true}
+  - {name: 🇵🇱 波兰 | POL, server: panel.karmatel.ir, port: 443, type: vless, uuid: 4b310d54-6938-4b89-9414-dfc7c6fdae06, tls: true, alpn: ["h2,http/1.1"], servername: dl4.karmatel.ir, client-fingerprint: chrome, network: ws, ws-opts: {path: /, headers: {Host: dl4.karmatel.ir}}, udp: true}
+  - {name: 🇵🇱 波兰 | POL 2, server: panel.karmatel.ir, port: 8880, type: vless, uuid: 4b310d54-6938-4b89-9414-dfc7c6fdae06, tls: true, alpn: ["h2,http/1.1"], client-fingerprint: chrome, network: ws, ws-opts: {path: /, headers: {Host: panel.karmatel.ir}}, udp: true}
+  - {name: 🇵🇱 波兰 | POL 3, server: included-hedgehog.rooster465.autos, port: 443, type: trojan, password: XG59623478, skip-cert-verify: true, udp: true}
+  - {name: 🇹🇷 土耳其 | TUR, server: turki.gelqino.ir, port: 17830, type: vless, uuid: e1c7f7ce-5bf8-41a8-87d5-896d2659f08a, tls: false, network: ws, ws-opts: {path: /vless, headers: {Host: turki.gelqino.ir}}, udp: true}
+  - {name: 🇺🇸 美国 | USA, server: x4g-production-6e53.up.railway.app, port: 443, type: vless, uuid: 43dd521f-39b4-0a5d-0e67-6146c3fe5fdb, tls: true, alpn: [http/1.1], servername: x4g-production-6e53.up.railway.app, client-fingerprint: ios, network: ws, ws-opts: {path: /ws/43dd521f-39b4-0a5d-0e67-6146c3fe5fdb, headers: {Host: x4g-production-6e53.up.railway.app}}, udp: true}
+  - {name: 🇺🇸 美国 | USA 2, server: x4g-production-5110.up.railway.app, port: 443, type: vless, uuid: 7726f5f8-eded-a25f-d5c4-55e48ae096ea, tls: true, alpn: [http/1.1], servername: x4g-production-5110.up.railway.app, client-fingerprint: chrome, network: ws, ws-opts: {path: /ws/7726f5f8-eded-a25f-d5c4-55e48ae096ea, headers: {Host: x4g-production-5110.up.railway.app}}, udp: true}
+  - {name: 🇺🇸 美国 | USA 3, server: novel-bat.rooster465.autos, port: 443, type: trojan, password: XG59623478, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 美国 | USA 4, server: frank-piranha.rooster465.autos, port: 443, type: trojan, password: XG59623478, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: ✈️ ‍起飞
     type: select
@@ -35,13 +44,31 @@ proxy-groups:
     interval: 30
     tolerance: 100
     proxies:
-      - 🇰🇷 韩国 | KOR
+      - 🇦🇹 奥地利 | AUT
+      - 🇩🇪 德国 | DEU
+      - 🇳🇱 荷兰 | NLD
+      - 🇵🇱 波兰 | POL
+      - 🇵🇱 波兰 | POL 2
+      - 🇵🇱 波兰 | POL 3
+      - 🇹🇷 土耳其 | TUR
       - 🇺🇸 美国 | USA
+      - 🇺🇸 美国 | USA 2
+      - 🇺🇸 美国 | USA 3
+      - 🇺🇸 美国 | USA 4
   - name: 👆🏻 ‍指定
     type: select
     proxies:
-      - 🇰🇷 韩国 | KOR
+      - 🇦🇹 奥地利 | AUT
+      - 🇩🇪 德国 | DEU
+      - 🇳🇱 荷兰 | NLD
+      - 🇵🇱 波兰 | POL
+      - 🇵🇱 波兰 | POL 2
+      - 🇵🇱 波兰 | POL 3
+      - 🇹🇷 土耳其 | TUR
       - 🇺🇸 美国 | USA
+      - 🇺🇸 美国 | USA 2
+      - 🇺🇸 美国 | USA 3
+      - 🇺🇸 美国 | USA 4
   - name: 🛩️ ‍墙内
     type: select
     proxies:
@@ -130,13 +157,22 @@ proxy-groups:
     tolerance: 300
     proxies:
       - 🇺🇸 美国 | USA
+      - 🇺🇸 美国 | USA 2
+      - 🇺🇸 美国 | USA 3
+      - 🇺🇸 美国 | USA 4
   - name: 🎏 ‍其他
     type: url-test
     url: https://i.ytimg.com/generate_204
     interval: 30
     tolerance: 100
     proxies:
-      - 🇰🇷 韩国 | KOR
+      - 🇦🇹 奥地利 | AUT
+      - 🇩🇪 德国 | DEU
+      - 🇳🇱 荷兰 | NLD
+      - 🇵🇱 波兰 | POL
+      - 🇵🇱 波兰 | POL 2
+      - 🇵🇱 波兰 | POL 3
+      - 🇹🇷 土耳其 | TUR
   - name: 👆🏻🇭🇰 ‍香港
     type: select
     proxies:
@@ -161,10 +197,19 @@ proxy-groups:
     type: select
     proxies:
       - 🇺🇸 美国 | USA
+      - 🇺🇸 美国 | USA 2
+      - 🇺🇸 美国 | USA 3
+      - 🇺🇸 美国 | USA 4
   - name: 👆🏻🎏 ‍其他
     type: select
     proxies:
-      - 🇰🇷 韩国 | KOR
+      - 🇦🇹 奥地利 | AUT
+      - 🇩🇪 德国 | DEU
+      - 🇳🇱 荷兰 | NLD
+      - 🇵🇱 波兰 | POL
+      - 🇵🇱 波兰 | POL 2
+      - 🇵🇱 波兰 | POL 3
+      - 🇹🇷 土耳其 | TUR
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,DIRECT
   - DOMAIN-SUFFIX,ip6-localhost,DIRECT
